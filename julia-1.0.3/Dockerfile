@@ -27,6 +27,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 	julia -e 'import Pkg; Pkg.add("JLD")' && \
 	julia -e 'import Pkg; Pkg.add("JSON")' && \
 	julia -e 'import Pkg; Pkg.add("Plots")' && \
+	julia -e 'import Pkg; Pkg.add("StatsPlots")' && \
 	julia -e 'import Pkg; Pkg.add("HTTP")' && \
 	julia -e 'import Pkg; Pkg.add("ProgressMeter")' && \
 	julia -e 'import Pkg; Pkg.add("Clustering")' && \
@@ -39,13 +40,14 @@ RUN julia -e 'using IJulia; IJulia.installkernel("Julia nodeps", "--depwarn=no")
 	julia -e 'using JLD' && \
 	julia -e 'using JSON' && \
 	julia -e 'using Plots' && \
+	julia -e 'using StatsPlots' && \
 	julia -e 'using HTTP' && \
 	julia -e 'using ProgressMeter' && \
 	julia -e 'using Clustering' && \
 	julia -e 'using StatsBase' && \
 	julia -e 'using Interpolations'
 
-# install Clp solver and JuMP for PL problems
+# install Clp solver and JuMP for LP problems
 
 RUN julia -e 'import Pkg; Pkg.add("Clp")' && \
 	julia -e 'using Clp' && \
