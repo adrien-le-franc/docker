@@ -25,7 +25,8 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 	julia -e 'import Pkg; Pkg.add("ArgParse")' && \
 	julia -e 'import Pkg; Pkg.add("HDF5")' && \
 	julia -e 'import Pkg; Pkg.add("JLD")' && \
-	julia -e 'import Pkg; Pkg.add("JSON")' && \
+	julia -e 'import Pkg; Pkg.add("CSV")' && \
+	julia -e 'import Pkg; Pkg.add("DataFrames")' && \
 	julia -e 'import Pkg; Pkg.add("Plots")' && \
 	julia -e 'import Pkg; Pkg.add("StatsPlots")' && \
 	julia -e 'import Pkg; Pkg.add("HTTP")' && \
@@ -38,7 +39,8 @@ RUN julia -e 'using IJulia; IJulia.installkernel("Julia nodeps", "--depwarn=no")
 	julia -e 'using ArgParse' && \
 	julia -e 'using HDF5' && \
 	julia -e 'using JLD' && \
-	julia -e 'using JSON' && \
+	julia -e 'using CSV' && \
+	julia -e 'using DataFrames' && \
 	julia -e 'using Plots' && \
 	julia -e 'using StatsPlots' && \
 	julia -e 'using HTTP' && \
