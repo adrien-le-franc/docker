@@ -30,6 +30,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 	julia -e 'import Pkg; Pkg.add("Plots")' && \
 	julia -e 'import Pkg; Pkg.add("StatsPlots")' && \
 	julia -e 'import Pkg; Pkg.add("HTTP")' && \
+	julia -e 'import Pkg; Pkg.add("EllipsisNotation")' && \
 	julia -e 'import Pkg; Pkg.add("ProgressMeter")' && \
 	julia -e 'import Pkg; Pkg.add("Clustering")' && \
 	julia -e 'import Pkg; Pkg.add("StatsBase")' && \
@@ -44,6 +45,7 @@ RUN julia -e 'using IJulia; IJulia.installkernel("Julia nodeps", "--depwarn=no")
 	julia -e 'using Plots' && \
 	julia -e 'using StatsPlots' && \
 	julia -e 'using HTTP' && \
+	julia -e 'using EllipsisNotation' && \
 	julia -e 'using ProgressMeter' && \
 	julia -e 'using Clustering' && \
 	julia -e 'using StatsBase' && \
