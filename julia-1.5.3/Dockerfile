@@ -39,6 +39,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 	julia -e 'import Pkg; Pkg.add("Clustering")' && \
 	julia -e 'import Pkg; Pkg.add("StatsBase")' && \
 	julia -e 'import Pkg; Pkg.add("Interpolations")' && \
+	julia -e 'import Pkg; Pkg.add("Polynomials")' && \
 	julia -e 'import Pkg; Pkg.add("Distributions")' 
 
 RUN julia -e 'using IJulia; IJulia.installkernel("Julia nodeps", "--depwarn=no")' && \
@@ -59,6 +60,7 @@ RUN julia -e 'using IJulia; IJulia.installkernel("Julia nodeps", "--depwarn=no")
 	julia -e 'using Clustering' && \
 	julia -e 'using StatsBase' && \
 	julia -e 'using Interpolations' && \
+	julia -e 'using Polynomials' && \
 	julia -e 'using Distributions'
 
 # install Clp solver and JuMP for LP problems
